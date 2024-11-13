@@ -1,0 +1,2 @@
+where we have to define the script tag in the html page 
+inside body or head why explain with example 

@@ -1,2 +1,38 @@
 where we have to define the script tag in the html page 
 inside body or head why explain with example 
+
+<script> Tag in <head>
+Placing the <script> tag in the <head> section means the JavaScript file will load before any visible content. This can be useful for setting up any initial JavaScript functions or variables before the page fully loads, but it may delay the rendering of the page content if the script is large or takes time to load
+In this case, the browser stops rendering the page until the script is downloaded and executed, which can make the page load more slowly, especially on larger files
+
+<script> Tag at the End of <body>
+Placing the <script> tag at the end of the <body> is generally recommended for faster page loading. Here, the HTML content loads first, and JavaScript loads after, allowing the user to see the content more quickly. This placement is ideal for scripts that interact with elements on the page because all elements are available by the time the script runs.
+
+<head> with defer: Loads script in parallel and runs after DOM parsing.
+<head> with async: Loads script in parallel and executes as soon as it’s ready, regardless of DOM parsing status.
+
+<head> without defer or async: Scripts load and execute before page content, which can delay rendering.
+End of <body>: Loads content first, then the script, improving user experience.
+
+<script src="script.js" async></script>
+
+2)what is decleare and initlize variable in js
+3)we have declared the variable and it gives undefined why
+   let firstNumber;
+        // firstNumber=10;
+        document.write(firstNumber);
+diff btw variable and identifier     
+
+An identifier is the name given to a variable, function, class, or any other entity defined by the user in code. It is the label used to reference the variable in code. For example, in let firstNumber = 10;
+A variable is a container for storing data values. In JavaScript, you declare a variable using let, const, or var, and it holds data that may be updated or modified (if let or var is used).
+
+When a variable is declared but not initialized, it is assigned the default value of undefined in JavaScript. 
+This error occurs because Python tries to look up the variable b, but since it hasn’t been declared or initialized with any value, Python doesn't recognize it.
+* bytes is used to store value in the range
+* operators in javascript with example using js and css  in professional
+*condition statements with example in js 1)if 2) else if  3)if else ladder 4)switch
+* 2 input fom and pass the value 
+1)static -the value onces declared cant be changed 
+2)dynamic=once assigned can be changed 
+variable -name give to the memory location
+write and come in A4 sheet the question in wsap-monday with ex

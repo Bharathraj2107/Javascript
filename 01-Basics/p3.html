@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>VARIABLE SCOPES</h1>
+        <p>1) Global scope => defines outside of the block.</p>
+        <p>2) Local scope => defines inside the block.</p>
+    </center>
+    <hr>
+
+    <!-- Internal Script -->
+     <script>
+        var a=10;
+        var b=33;
+        var c=44;
+        let d=50;
+
+        document.write(`<p>a = ${a} <p>`)
+            document.write(`<p>b = ${b} <p>`)
+            document.write(`<p>c = ${c} <p>`)
+            document.write(`<p>d = ${d} <p><hr>`)
+        if (d>a){
+
+            document.write(`CONDITION IS TRUE`)
+            document.write(`<p>a = ${a} <p>`)
+            document.write(`<p>b = ${b} <p>`)
+            document.write(`<p>c = ${c} <p>`)
+            document.write(`<p>d = ${d} <p><hr>`)
+            var x=100;//it supports global
+            let y=200;//it supports local
+            const z=300;//it supports local
+            document.write(`<p>x = ${x} <p>`)
+            document.write(`<p>y = ${y} <p>`)
+            document.write(`<p>z = ${z} <p><hr>`)
+
+        }
+        document.write(`<p>x = ${x} <p>`)
+        // document.write(`<p>y = ${y} <p>`)//it is outside the block which does not support local scope
+        // document.write(`<p>z = ${z} <p><hr>`)///it is outside the block which does not support local scope it only support s global scope
+
+            let p=1000;
+            var q=2000;    
+            const r=3000;
+
+        document.write(`<p> p = ${p} <p>`)
+        document.write(`<p> q = ${q} <p>`)
+        document.write(`<p> r = ${r} <p> <hr>`)
+
+        p=2000;
+        q=3000;    
+        // r=7000;  //it gives error becoz constant can't change the value
+        
+        document.write(`<p>p = ${p} <p>`)
+        document.write(`<p>q = ${q} <p>`)
+        document.write(`<p>r = ${r} <p> <hr>`)
+
+
+        var isAdmin=false;  
+        document.write(`<p>isAdmin=${typeof(isAdmin)}`) 
+        document.write(`<p>isAdmin=${isAdmin}`) 
+
+        var isAdmin=true;  
+        document.write(`<p>isAdmin=${typeof(isAdmin)}`) 
+        document.write(`<p>isAdmin=${isAdmin}<hr>`)  
+            
+        var title="Welcome to Js";  //here both the string and char =>string
+        document.write(`<p>title=${typeof(title)}`) 
+        document.write(`<p>title=${title}`) 
+            
+        var title="A";  //here both the string and char =>string
+        document.write(`<p>title=${typeof(title)}`) 
+        document.write(`<p>title=${title} <hr>`)    
+
+            
+        var xx=12342;  //here int,float,exponential,hex=>numbers 
+        document.write(`<p>xx=${typeof(xx)}`) 
+        document.write(`<p>xx=${xx}`) 
+            
+        var xx=34.343; //here int,float,exponential,hex=>numbers 
+        document.write(`<p>xx=${typeof(xx)}`) 
+        document.write(`<p>xx=${xx} <hr>`) 
+            
+            
+        var yy=2**10; 
+        document.write(`<p>yy=${typeof(yy)}`) 
+        document.write(`<p>yy=${yy}`) 
+            
+        var zz= 0x9D2;
+        document.write(`<p>zz=${typeof(zz)}`) 
+        document.write(`<p>zz=${zz} <hr>`)   
+       
+        var x=[10,20,30,40,50];
+        document.write(`<p>x=${typeof(x)}`) 
+        document.write(`<p>x=${x[0]}`) 
+        document.write(`<p>x=${x[1]}`) 
+        document.write(`<p>x=${x[2]}`) 
+        document.write(`<p>x=${x[3]}`) 
+        document.write(`<p>x=${x[4]} <hr>`) 
+
+        var y=['Ram','sam','john','harry','rahul'];
+        document.write(`<p>y=${typeof(y)}`) 
+         document.write(`<p>y=${y}`)//it will display in one line   
+        document.write(`<p>y=${y[0]}`) 
+        document.write(`<p>y=${y[1]}`) 
+        document.write(`<p>y=${y[2]}`) 
+        document.write(`<p>y=${y[3]}`) 
+        document.write(`<p>y=${y[4]} <hr>`) 
+        
+        var z=[10,'Ram',30,'kohli',50,'mohit'];//in js we don't have any data type
+        document.write(`<p>x=${typeof(z)}`) 
+        document.write(`<p>x=${z[0]}`) 
+        document.write(`<p>x=${z[1]}`) 
+        document.write(`<p>x=${z[2]}`) 
+        document.write(`<p>x=${z[3]}`) 
+        document.write(`<p>x=${z[4]} <hr>`) 
+
+         var user={
+            name:'ram',
+            age:20,
+            number:123456789,
+         };
+         document.write(`<p>user=${typeof(user)}`) 
+         document.write(`<p>user=${user.name}`) 
+         document.write(`<p>user=${user.age}`) 
+         document.write(`<p>user=${user.number}`)
+        </script>
+
+ 
+</body>
+</html>

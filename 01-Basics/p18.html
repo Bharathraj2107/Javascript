@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Patterns</title>
+    <style>
+        .container {
+            background-color: darkgoldenrod;
+            width: 300px;
+            height: auto;
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        input {
+            margin: 10px;
+        }
+        label {
+            color: white;
+        }
+        button {
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: ivory;
+            color: black;
+            margin: 10px;
+        }
+        #result {
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Looping Statements</h1>
+        <h1>Pattern Generator</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form>
+            <label for="num">Enter value of N</label>
+            <input type="number" id="num" min="1">
+            <button onclick="generatePatterns(event)">Submit</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script>
+        function generatePatterns(event) {
+            event.preventDefault();
+            let num = parseInt(document.getElementById("num").value);
+            if (num < 1) {
+                document.getElementById("result").innerHTML = "Please enter a valid number greater than 1.";
+                return;
+            }
+
+            let pattern1 = ""; 
+            
+
+            for (let i = 1; i <= num; i++) {//i means row and j means column
+                
+                for (let j = 1; j <= i; j++) {//j means number of columns
+                    pattern1 += "*";
+                }
+                pattern1 += "<br>";
+
+            }
+            document.getElementById("result").innerHTML = `
+                <b>Pattern 1:</b><br>${pattern1}`;
+        }
+    </script>
+</body>
+</html>

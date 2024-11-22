@@ -36,3 +36,16 @@ This error occurs because Python tries to look up the variable b, but since it h
 2)dynamic=once assigned can be changed 
 variable -name give to the memory location
 write and come in A4 sheet the question in wsap-monday with ex
+
+
+#operator
+take the input from the input box and use css to design it and when we click submit button  it should display the output it must be responsive 
+* what is diff btw logical and conditional and,not,or with example p6.js all the operations in the above method
+switch same for 
+create a employee details and we click submit it it should display the details in the display using html and css
+event.
+preventDefault()//avoid page refresh
+js give priority for value and next is add
+p12 using switch case add,sub,mul,div,rem a nad b use dropdown also //do this tmr
+p13 -1 text box and button text value between 70-100(A) 50-70 (B) 35-50(c) ==35(D),fail  //do this tmr
+download 3 videos in pexels for saturday 3 to 6;

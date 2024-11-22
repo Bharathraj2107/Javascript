@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color:gold;
+            width:200px;
+            height:400px;
+            text-align: center;
+            border-radius: 10px;
+            padding:20px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:lightseagreen;
+            color:black;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Looping statements</h1>
+        <h1>Do while loop</h1>
+    </center>
+    <hr>
+    <div class="container">
+    <form action="">
+        <label for="">Enter value of N</label>
+        <input type="number"id="num">
+        <button  onclick="loop(event)">submit</button>
+    </form>
+    <p id="result"></p>
+    </div>
+    <script>
+    function loop(event){
+    event.preventDefault();
+    let num=document.getElementById("num").value;
+    let result="";//if we declare only result and semicolon we get the undefined keywordMake sure result starts as an empty string (let result = "";). Without this, it might result in undefined being concatenated.
+    let i=1;//for while loop initialize the i variable
+       do{
+        result+=i+"<br>";
+        i++;
+        } while(i<=num);
+        document.getElementById("result").innerHTML=`Result:<br>${result}`;
+    
+}
+</script>

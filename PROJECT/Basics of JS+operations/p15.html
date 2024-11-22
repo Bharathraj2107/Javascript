@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    <style>
+        .container { /* same styles as before */ }
+    </style>
+</head>
+<body>
+    <center><h1>Factorial</h1></center>
+    <div class="container">
+        <form action="">
+            <label for="">Enter a number</label>
+            <input type="number" id="num"><br>
+            <button type="submit" onclick="findFactorial(event)">Submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function findFactorial(event) {
+            event.preventDefault();
+            let num = parseInt(document.getElementById("num").value);
+            let factorial = 1;
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+            document.getElementById("result").innerHTML = `Factorial of ${num} is: ${factorial}`;
+        }
+    </script>
+</body>
+</html>

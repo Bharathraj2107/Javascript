@@ -1,0 +1,39 @@
+<!-- check the largest number between 2 numbers  need all conditions-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <center>
+        <h1>Largest of 2 numbers</h1>
+    </center>
+    <hr>
+    <script>
+       var num1=Number(prompt("enter the value of num1"))
+       var num2=Number(prompt("enter the value of num2"))
+            if(num1 === num2) {
+                document.write(`<h2>Numbers are equal</h2>`);
+            } 
+            else if(num1 > num2)
+            {
+                document.write(`<h2>num1 Variable value is big</h2>`);
+            }
+            else if(num1 < num2)
+            {
+                document.write(`<h2>num2 Variable value is big</h2>`);
+            } 
+            else if(num1 !== num2)
+            {
+                document.write(`<h2>Numbers are not equal</h2>`);
+            }
+            else{
+                document.write(`<h2>Enter Valid Data</h2>`);
+            }
+    
+      
+    </script>
+ </body>
+ </html>

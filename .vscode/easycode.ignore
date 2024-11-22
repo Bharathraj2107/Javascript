@@ -1,0 +1,21 @@
+node_modules/
+dist/
+vendor/
+cache/
+.*/
+*.min.*
+*.test.*
+*.spec.*
+*.bundle.*
+*.bundle-min.*
+*.log
+in projects folder
+1)largest of two numbers
+2)3
+3)leap year give numbers take from user 2 text box and 1 button in the form of card
+4)celcius to farenheit and farenheit to celcius
+5)number is +ve or -ve
+6)odd and even numbers
+7)
+8)check input is characteris aplphabet,digit or special character take input from the box
+9)vowels or consonent

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: crimson;
+            width:200px;
+            height:200px;
+            text-align: center;
+            padding:20px;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+            border-radius:5px;
+        }
+        label{
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color: indigo;
+            color:white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- p13 -1 text box and button text value between 70-100(A) 50-70 (B) 35-50(c) ==35(D),fail  //do this tmr -->
+     <center>
+        <h1>Value between 70-100(A) 50-70 (B) 35-50(c) ==35(D),fail</h1>
+     </center>
+     <hr>
+     <div class="container">
+        <form action="">
+            <label for="">Enter the value</label>
+            <input type="number" id="val">
+            <button type="submit" onclick="check(event)">submit</button>
+            <p id="result"></p>
+        </form>
+     </div>
+     <script>
+     function check(event){
+    event.preventDefault()//;prevent the form from reloading the page in function event also helps
+    let val=parseInt(document.getElementById("val").value);
+    let result;
+
+    if(val>=70 && val<=100){
+        result="A";
+    }
+    else if(val>=50 && val<=70){
+        result="B";
+    }
+    else if(val>35 && val<=50){
+        result="C";
+    }
+    else if(val==35){
+        result="Fail";
+    }
+    else{
+        result="Invalid";
+    }
+
+        document.getElementById("result").innerHTML=`Result:${result}`;
+}
+</script>
+</body>
+</html>

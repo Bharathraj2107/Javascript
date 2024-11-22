@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:200px;
+            width:300px;
+            text-align: center;
+            background-color:dimgrey;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            margin-top:10px;
+            padding-top:20px;
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:magenta;
+            color:white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Find the number is odd or even</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the number</label>
+            <input type="text"id="num"><br>
+            <button type="submit" onclick="find(event)">submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function find(event){
+            event.preventDefault();
+            let num=document.getElementById("num").value;
+            if(num>0){
+                document.getElementById("result").innerHTML=`The number ${num} is positive.`;
+            }
+            else if(num==0){
+                document.getElementById("result").innerHTML=`The number ${num} is  neither positive nor negative.`;
+            }
+            else{
+                document.getElementById("result").innerHTML=`The number ${num} is negative.`;
+            }   
+        }
+    </script>
+</body>
+</html>

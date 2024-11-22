@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:300px;
+            width:300px;
+            text-align: center;
+            background-color:dimgrey;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            margin-top:10px;
+            padding-top:20px;
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:magenta;
+            color:white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Leap year test</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the year</label>
+            <input type="text"id="yea"><br>
+            <button type="submit" onclick="find(event)">submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function find(event){
+            event.preventDefault();
+            let year=parseInt(document.getElementById("yea").value);
+            if(year%4==0 && year%100!==0 || year%400==0)
+            {
+                document.getElementById("result").innerHTML="The year "+year+" is a leap year.";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="The year "+year+" is not a leap year.";
+            }
+          
+  
+        }
+    </script>
+</body>
+</html>

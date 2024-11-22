@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: hotpink;
+            width:200px;
+            height:400px;
+            text-align: center;
+            border-radius: 10px;
+            padding:20px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color: indigo;
+            color:white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Looping statements</h1>
+        <h1>For loop</h1>
+    </center>
+    <hr>
+    <div class="container">
+    <form action="">
+        <label for="">Enter value of N</label>
+        <input type="number"id="num">
+        <button  onclick="loop(event)">submit</button>
+    </form>
+    <p id="result"></p>
+    </div>
+    <!-- for(init;condition;inc/dec)
+    while(con)
+    do while(con)
+    //ECMA(advanced js) script methods
+    forEach()
+    for..in
+    for..of
+    for..await..of 
+    map method-->
+<!-- p14 using for loop display the result like value of 1  -->
+<!-- one text box,button and css code 
+ in p15 using while loop same format
+ in p16 using do while submit tmr 13,14,15,16,-->
+ <script>
+    function loop(event) {
+        event.preventDefault();
+        let num=document.getElementById("num").value;
+        let result="";//if we declare only result and semicolon we get the undefined keywordMake sure result starts as an empty string (let result = "";). Without this, it might result in undefined being concatenated.
+        for(let i=0;i<=num;i++){
+            result+=i+"<br>";
+            }
+            document.getElementById("result").innerHTML=`Result:<br>${result}`;
+        
+    }
+ </script>
+</body>
+</html>

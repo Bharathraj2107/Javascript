@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>with parameter without return value</h1>
+    </center>
+    <hr>
+    <form action="">
+        <label for="">Parameter</label>
+        <input type="number" id="para" placeholder="enter the parameter">
+        <button type="submit" onclick="with_parameter_without_return_value(event)">Submit</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function with_parameter_without_return_value(event){
+            event.preventDefault();
+            let para=parseInt(document.getElementById("para").value);
+            function sum(para){
+                let sum=0;
+                for(let i=1;i<=para;i++){
+                    sum+=i;
+                }
+                document.getElementById("result").innerText = `The sum is: ${sum}`;
+            }
+            sum(para);
+        }
+       
+
+        
+    </script>
+</body>
+</html>

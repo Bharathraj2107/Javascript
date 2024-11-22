@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Edit and Delete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin: 10px 0;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        .action-btn {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .edit-btn {
+            background-color: #28a745;
+            color: white;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Information Form</h1>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" disabled>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <button type="button" onclick="addUser()">Add User</button>
+        </form>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Full Name</th>
+                    <th>Mobile</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User entries will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Function to add user details to the table
+        function addUser() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const fullName = `${firstName} ${lastName}`;
+            const mobile = document.getElementById('mobile').value;
+
+            if (!firstName || !lastName || !mobile) {
+                alert('Please fill all required fields!');
+                return;
+            }
+
+            // Add a new row to the table
+            const tableBody = document.querySelector('#userTable tbody');
+            const newRow = document.createElement('tr');
+
+            newRow.innerHTML = `
+                <td>${firstName}</td>
+                <td>${lastName}</td>
+                <td>${fullName}</td>
+                <td>${mobile}</td>
+                <td>
+                    <button class="action-btn edit-btn" onclick="editUser(this)">Edit</button>
+                    <button class="action-btn delete-btn" onclick="deleteUser(this)">Delete</button>
+                </td>
+            `;
+
+            tableBody.appendChild(newRow);
+
+            // Clear the form fields after adding
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('mobile').value = '';
+        }
+
+        // Function to edit user details
+        function editUser(button) {
+            const row = button.parentNode.parentNode;
+            const firstName = row.cells[0].innerText;
+            const lastName = row.cells[1].innerText;
+            const mobile = row.cells[3].innerText;
+
+            // Pre-fill the form fields for editing
+            document.getElementById('firstName').value = firstName;
+            document.getElementById('lastName').value = lastName;
+            document.getElementById('mobile').value = mobile;
+
+            // Remove the row from the table for re-addition
+            row.remove();
+        }
+
+        // Function to delete user details
+        function deleteUser(button) {
+            const row = button.parentNode.parentNode;
+            row.remove();
+        }
+
+        // Auto-fill full name based on first and last name
+        document.getElementById('firstName').addEventListener('input', () => {
+            document.getElementById('fullName').value =
+                `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+        });
+        document.getElementById('lastName').addEventListener('input', () => {
+            document.getElementById('fullName').value =
+                `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+        });
+    </script>
+</body>
+</html>

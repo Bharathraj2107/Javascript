@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:200px;
+            width:300px;
+            text-align: center;
+            background-color:dimgrey;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            margin-top:10px;
+            padding-top:20px;
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:magenta;
+            color:white;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Find if a character is vowel or consonant</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the character</label>
+            <input type="text"id="ch"><br>
+            <button type="submit" onclick="find(event)">submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function find(event){
+            event.preventDefault();
+            let ch=document.getElementById("ch").value;
+            switch(ch){
+                case'a':case 'e':case 'i':case'o':case'u':
+                document.getElementById("result").innerHTML=`The character ${ch} is a vowel.`;
+                break;
+                default:
+                document.getElementById("result").innerHTML=`The character ${ch} is a consonant.`;
+            }
+        }
+    </script>
+</body>
+</html>

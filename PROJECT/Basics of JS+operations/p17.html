@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Type Classification</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 300px;
+            text-align: center;
+            background-color: dimgrey;
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        input, button {
+            margin: 10px;
+        }
+        label {
+            color: white;
+        }
+        button {
+            border-radius: 10px;
+            padding: 10px 20px;
+            background-color: magenta;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Triangle Type Classification</h1></center>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the three sides of the triangle</label><br>
+            <input type="number" id="side1" placeholder="Side 1"><br>
+            <input type="number" id="side2" placeholder="Side 2"><br>
+            <input type="number" id="side3" placeholder="Side 3"><br>
+            <button type="submit" onclick="classifyTriangle(event)">Submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function classifyTriangle(event) {
+            event.preventDefault();
+            let side1 = parseFloat(document.getElementById("side1").value);
+            let side2 = parseFloat(document.getElementById("side2").value);
+            let side3 = parseFloat(document.getElementById("side3").value);
+
+            if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+                document.getElementById("result").innerHTML = "Sides must be greater than zero.";
+                return;
+            }
+
+            // Check for triangle validity
+            if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+                if (side1 === side2 && side2 === side3) {
+                    document.getElementById("result").innerHTML = "This is an Equilateral triangle.";
+                } else if (side1 === side2 || side2 === side3 || side1 === side3) {
+                    document.getElementById("result").innerHTML = "This is an Isosceles triangle.";
+                } else {
+                    document.getElementById("result").innerHTML = "This is a Scalene triangle.";
+                }
+
+                // Check for angle-based type
+                let a = side1 * side1, b = side2 * side2, c = side3 * side3;
+                if (a + b === c || a + c === b || b + c === a) {
+                    document.getElementById("result").innerHTML += "<br>This is also a Right triangle.";
+                } else if (a + b > c && a + c > b && b + c > a) {
+                    document.getElementById("result").innerHTML += "<br>This is an Acute triangle.";
+                } else {
+                    document.getElementById("result").innerHTML += "<br>This is an Obtuse triangle.";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "The sides do not form a valid triangle.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:200px;
+            width:300px;
+            text-align: center;
+            background-color:darkolivegreen;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:lightseagreen;
+            color:black;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Program to print number of days in a month</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the month</label>
+            <input type="text"id="month">
+            <button type="submit" onclick="days(event)">submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function days(event){
+            event.preventDefault();
+            let month=document.getElementById("month").value;
+            switch(month){
+                case'january':case 'march':case 'may':case'july':case'august':case'october':case'december':
+                document.getElementById("result").innerHTML=`The month ${month} has 31 days.`;
+                break;
+                case'april':case'june':case'september':case'november':
+                document.getElementById("result").innerHTML=`The month ${month} has 30 days.`;
+                break;
+                case'february':
+                document.getElementById("result").innerHTML=`The month ${month} has 28 days.`;
+                break;
+                default:
+                document.getElementById("result").innerHTML=`Enter valid month.`;
+            }
+        }
+    </script>
+</body>
+</html>

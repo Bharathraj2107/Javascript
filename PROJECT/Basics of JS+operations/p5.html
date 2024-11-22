@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height:200px;
+            width:300px;
+            text-align: center;
+            background-color:darkolivegreen;
+            border-radius: 10px;
+        }
+        input{
+            margin:10px;
+        }
+        label{
+            color:white;
+        }
+        button{
+            border-radius: 10px;
+            padding:10px 20px;
+            background-color:lightseagreen;
+            color:black;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>check input character is alphabet,digit or special character</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form action="">
+            <label for="">Enter the input</label>
+            <input type="text"id="inp">
+            <button type="submit" onclick="check(event)">submit</button>
+            <p id="result"></p>
+        </form>
+    </div>
+    <script>
+        function check(event){
+            event.preventDefault();
+            let inp=document.getElementById("inp").value;
+            let typ=typeof(inp);
+            if (!isNaN(inp) && inp.trim() !== "") {//and it should not be empty space
+               // isNaN stands for "is Not-a-Number". It is a built-in JavaScript function used to determine whether a value is not a valid number.
+                result = "Input is a number.";
+             } 
+
+            else if (/^[a-zA-Z]+$/.test(inp)) {
+                result = "Input is a string.";
+                 } 
+            else    
+            {
+               result="Input is a special character";
+            }
+            document.getElementById("result").innerHTML=result;
+        }
+    </script>
+</body>
+</html>

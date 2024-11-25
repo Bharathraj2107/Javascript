@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GCF</title>
     <style>
-        .container { /* same styles as before */ }
+        .container {
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            background-color: rgb(238, 153, 153);
+            border-radius: 10px;
+        }
+        input, button {
+            margin: 10px;
+        }
+        label {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -24,11 +36,11 @@
             event.preventDefault();
             let num1 = parseInt(document.getElementById("num1").value);
             let num2 = parseInt(document.getElementById("num2").value);
-            while (num1 !== num2) {
+            while (num1 !== num2) {//we are doing this until num1==num2
                 if (num1 > num2) num1 -= num2;
                 else num2 -= num1;
             }
-            document.getElementById("result").innerHTML = `The GCF is: ${num1}`;
+            document.getElementById("result").innerHTML=`The GCF is: ${num1}`;
         }
     </script>
 </body>

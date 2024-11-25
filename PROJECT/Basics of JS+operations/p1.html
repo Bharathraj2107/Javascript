@@ -48,7 +48,7 @@
             event.preventDefault();
         let num1 = parseInt(document.getElementById("num1").value);
         let num2 = parseInt(document.getElementById("num2").value);
-        let result="";
+        let result="";//if we declare only result and semicolon we get the undefined keywordMake sure result starts as an empty string (let result = "";). Without this, it might result in undefined being concatenated.
            if(num1 === num2) {
              result='Numbers are equal';
            } 

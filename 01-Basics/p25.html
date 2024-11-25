@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+</head>
+<body>
+    <center>
+        <h1>Function</h1>
+    </center>
+    <hr>
+   
+   
+    <script>
+    function main(a,b){
+        return a+b
+    }
+    document.write("<h1>ECMA SCRIPT CODE</h1>")
+    document.write("<h1>function defining ..!(Local function)<br> </h1>sum=",main(70,7))
+
+     function main2(a,b) {
+        let fullname=a+" "+b
+        return fullname
+    }
+    document.write("<h1>Function expression..!</h1>",main2("HTML" ,"CSS"))
+
+     let e=()=>{
+        document.write("hello")
+     }
+     document.write(e())
+     let sum=(a,b)=>{
+        return a+b
+     }
+     document.write("<b>rem=</b><br>",sum(30,7))
+</script>
+<h1>Function expression</h1>
+</body>
+</html>

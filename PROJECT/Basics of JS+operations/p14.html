@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Check</title>
     <style>
-        .container { /* same styles as before */ }
+          .container {
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            background-color:cornflowerblue;
+            border-radius: 10px;
+        }
+        input, button {
+            margin: 10px;
+        }
+        label {
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <center><h1>Palindrome Number Check</h1></center>
+    <center><h1>Palindrome Number </h1></center>
     <div class="container">
         <form action="">
             <label for="">Enter a number</label>
@@ -22,7 +34,7 @@
         function checkPalindrome(event) {
             event.preventDefault();
             let num = document.getElementById("num").value;
-            let reversedNum = num.split("").reverse().join("");
+            let reversedNum = num.split("").reverse().join("");//num.split("") → ["1", "2", "3", "4", "5"]..reverse() → ["5", "4", "3", "2", "1"]..join("") → "54321".
             if (num === reversedNum) {
                 document.getElementById("result").innerHTML = `${num} is a palindrome.`;
             } else {

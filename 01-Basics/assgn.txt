@@ -49,3 +49,5 @@ js give priority for value and next is add
 p12 using switch case add,sub,mul,div,rem a nad b use dropdown also //do this tmr
 p13 -1 text box and button text value between 70-100(A) 50-70 (B) 35-50(c) ==35(D),fail  //do this tmr
 download 3 videos in pexels for saturday 3 to 6;
+
+variable declaration and variable definition

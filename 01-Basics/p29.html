@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>SCOPE</h1>
+    </center>
+    <hr>
+    <script>
+        /*var is a weaker signal and always have global scope*/
+        /*let and const are block scope {} variable*/
+
+        let x=15;
+        if(x>10){
+            var a=10;
+            let b=20;
+            const c=30;
+            document.write(`<p>x = ${x} <p>`)//global scope variable
+            document.write(`<p>a = ${a} <p>`)//global scope in block
+            document.write(`<p>b = ${b} <p>`)//local scope
+            document.write(`<p>c = ${c} <p>`)//local scope
+        }
+        document.write('<hr>')
+            document.write(`<p>x = ${x} <p>`)//global scope variable
+            document.write(`<p>a = ${a} <p>`)//global scope in block
+        try{      
+            document.write(`<p>b = ${b} <p>`)
+            document.write(`<p>c = ${c} <p>`)
+         }
+         catch(e){
+            document.write(`<p>error ${e} b <p>`)
+         }
+
+                
+    </script>
+</body>
+</html>

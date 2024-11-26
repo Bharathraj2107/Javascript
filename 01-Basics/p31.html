@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Reminder of 2 numbers</h1>
+    </center>
+    <hr>
+    <button onclick="calculate(event)">click to calculate</button>
+    <p id="result"></p>
+    <script>
+        function calculate(event){
+            event.preventDefault();
+            x=parseInt(prompt("enter the value of x"))
+            y=parseInt(prompt("enter the value of y"))
+            result=x%y;
+            document.getElementById('result').innerHTML=`Rem of x%y=${result}`
+
+        }
+    </script>
+</body>
+</html>

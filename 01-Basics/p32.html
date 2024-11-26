@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DataType Conversion</h1>
+    </center>
+    <hr>
+
+    <script>
+        document.write("<h1>converting values to numbers</h1>")
+        let str="123";
+        document.write(typeof(str)+"<br>");//.output string;
+        let num=Number(str)
+        document.write(typeof(num)+"<br>");//.output number;
+        document.write(Number("javascript"));
+        var number1=Number("10.5");//int,float,hexa,exponent
+        document.write(typeof(number1)+"<br>")//output number
+        document.write(number1+"<br>");//outputs:number
+        var number2=Number("10.5px");//Nan (not a number)
+
+        var x="123.343";
+        var y='1245.6420578654';
+        var z='Apple';
+        val=parseInt(x);
+        document.write(val+"<br>")
+        val1=parseInt(y);
+        document.write(val1+"<br>")
+        document.write(typeof(x)+"<br>")
+        document.write(typeof(y)+"<br>")
+        document.write(typeof(Z)+"<br>")
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Arrays</h1>
+        <p>An array is a collection od data.It is declared using square brackets</p>
+    </center>
+    <hr>
+    <pre>
+        Array -> is a group of value;
+        types
+        1.Literal type(single)
+            a.array Literal
+            b.array using constructor
+            c.array a s constructor parameter
+        2.Object Array
+        3.JSON(Javascript Object Notation) Array (Response of REST [Representational State Transfer]) API
+    </pre>
+    <hr>
+    <script>
+        //1.1 Array Literal
+        document.write(`<h3>Example-1</h3>`);
+        let num= [10,11,12,13,14,15];
+        document.write(`Num typeof(): ${typeof(num)}`);
+        document.write(`<h2> ${num}</h2>`);
+        document.write(`<h3>${num[4]}</h3>,"<br>"`);
+        for(let i=0;i<num.length-1;i++){
+            document.write(`<p style= 'color: blue;'>${num[i]}</p>`);
+        }
+
+        
+        document.write(`<h3>Example-2</h3>`);
+        let num1=["Ram","Venu","Sourav","Suma","Prajwal"];
+        document.write(`<h3>${num1}<h3>`);
+        document.write(`<h3>${num1[4]}</h3>`,"<br>");
+        for(let i=0;i<num1.length-1;i++){
+            document.write(`<p style= 'color: green;'>${num1[i]}</p>`);
+        }
+        
+
+        document.write(`<h3>Example-3</h3>`);
+        let num2=["true","mt@gmail.com",124,2356];
+        document.write(`<h3>${num2}<h3>`);
+        document.write(`<h3>${num2[1]}</h3>`);
+        document.write(`<h3>${num2[0]}</h3>`);
+        document.write(`<h3>${num2[2]}</h3>`,"<br>");
+
+        for(let i=0;i<=num2.length-1;i++){
+            document.write(`<p style= 'color: red;'>${num2[i]}</p>`);
+        }
+    </script>
+    
+</body>
+</html>

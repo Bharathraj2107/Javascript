@@ -33,6 +33,26 @@
         document.write(typeof(x)+"<br>")
         document.write(typeof(y)+"<br>")
         document.write(typeof(Z)+"<br>")
+        document.write(`<h3> y variable value is =${parseInt("123456")}</h3>`);
+        let yy=1245.678578654;
+        document.write(`<h3> y variable value is =${yy} </h3>`);
+        document.write(`<h3> y variable value is =${yy.toFixed()} </h3>`);
+        document.write(`<h3> y variable value is =${yy.toFixed(1)} </h3>`);//after decimal how many number 
+        document.write(`<h3> y variable value is =${yy.toFixed(2)} </h3>`);
+        document.write(`<h3> y variable value is =${yy.toFixed(3)} </h3>`);
+        document.write(`<h3> y variable value is =${yy.toFixed(4)} </h3>`);
+
+        Number(true)//return 1
+        Number(false)//return 0
+        Number(null)//return 0
+        Number(" 123 ")//return 123
+        Number(" ")// return 0
+        Number("")//return 0
+        Number("123e-1")//return 12.3
+        Number("0xff")//return 255 (hexadecimal representative)
+        Number("undefined")//return NaN -> Not a Number
+        Number("null")//return NAN
+        Number("Hello world!")//return NaN
     </script>
 </body>
 </html>

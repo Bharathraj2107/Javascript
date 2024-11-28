@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>converting values to strings</h1>
+        <p>check the output in browser console</p>
+    </center>
+    <hr>
+    <script>
+        document.write("<h1>converting values to string </h1>")
+        var bool=true;
+        document.write(typeof bool+"<br>");//outputs:boolean
+
+        var str1=String(bool);//becomes a string "true"
+        document.write(typeof str1+"<br>");//outputs string 
+
+        var a=33;
+        var isAdmin=true;
+        var x=2343.3453;
+        console.log('a=',typeof(a));
+        console.log('isAdmin=',typeof(isAdmin));
+        console.log('x=',typeof(x));
+
+        /*String() constructor*/
+        var o1=String(a);
+        var o2=String(isAdmin);
+        var o3=String(x);
+
+        console.log('a=',typeof(o1));
+        console.log('isAdmin=',typeof(o2));
+        console.log('x=',typeof(o3));
+
+        String(123)//return "123"
+        String(100+23) //return "123"
+        String(true)//returns "true"
+        String(false)//returns "false"
+        String("123e-1")//return "12.3"
+        String("0xff")//return "255"
+        String("undefined")//return "undefined"
+        String("null")//return "null"
+       
+
+    </script>
+</body>
+</html>

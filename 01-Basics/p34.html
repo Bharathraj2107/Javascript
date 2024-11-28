@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>NaN => Bot a Number</h1>
+    </center>
+    <hr>
+    <script>
+        var a ="123a";
+
+        document.write(`<h3> ${a} </h3>`);
+        document.write(`<h3>${Number(a)}</h3>`);//NaN here only for float,int,hex and not for strings so NaN
+        document.write(`<h3>${parseInt(a)}</h3>`);//only for int
+
+        document.write(`<h3>${isNaN(124)}</h3>`);//false
+        document.write(`<h3>${isNaN("12a4")}</h3>`);//true
+        document.write(`<h3>${isNaN("")}</h3>`);//false
+        document.write(`<h3>${isNaN("2021/2/5")}</h3>`);//true
+        document.write(`<h3>${isNaN(0/0)}</h3>`);//true
+</script>
+</body>
+</html>

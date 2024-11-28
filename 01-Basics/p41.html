@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object array</h1>
+    </center>
+    <hr>
+    <script>
+        let obj=new Array({},{},{},{},{},{});
+        for (let i=0;i<=obj.length-1;i++){
+        document.write(`<h4>${obj[i]};</h4>`)
+        }
+        let users=new Array(
+            {
+                id:1,
+                name:"Shrikanth",
+                email:"shrikath@gmail.com",
+                age:10,
+            },
+            {
+                id:2,
+                name:"Sharan",
+                email:"sharan@gmail.com",
+                age:20,
+            },
+            {
+                id:3,
+                name:"Sumanth",
+                email:"sumanth@gmail.com",
+                age:20,
+            }
+
+        )
+        for (let i=0;i<=users.length-1;i++){
+            document.write(`<h4>id=${users[i].id}<br>name= ${users[i].name}<br> email=${users[i].email} <br> age=${users[i].age}`)
+        }            
+        
+    </script>
+</body>
+</html>

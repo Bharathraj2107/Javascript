@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>KEYBOARD EVENT</h1>
+    </center>
+    <hr>
+    events<br>
+    1)onkeypress=>deprecated ,will have one key delay<br>
+    2)onkeydown=>will have one key of delay<br>
+    3)onkeyup=>no delay<br>
+    <br>
+    Enter Name  <input type="text" id="inp"  onkeypress="print(event)"><br><br>
+    <!-- Enter Name  <input type="text" id="inp" onkeydown="print(event)"><br><br>   -->
+    <!-- Enter Name  <input type="text" id="inp" onkeyup="print(event)"> -->
+    <p id="result"></p>
+    <script>
+        function print(event){
+          
+            val=document.getElementById("inp").value;
+            document.getElementById("result").innerHTML=val;
+        }
+    </script>
+</body>
+</html>

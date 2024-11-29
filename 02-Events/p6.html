@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        hr{
+            background-color: red;
+            padding:8px;
+        }
+     #container{
+        background-color: teal;
+        color:white;
+        overflow-y:scroll;
+        width:450px;
+        
+    }
+  
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onmousewheel() and onscroll()</h1>
+    </center>
+    <hr>
+    <h4 id="output"></h4>
+    <div id="container" onscroll="scrollHandler()" onmousewheel="scrollHandler()">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+        
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem ipsum officia a ducimus. Voluptatibus, dolores odit enim dolorum nobis, totam eum magnam perferendis omnis eius dolorem corporis nesciunt molestiae ut.</p>
+    </div>
+    <script>
+        function scrollHandler(){
+            document.getElementById('output').innerHTML=document.getElementById("txt").scrollTop+ " px";
+        }
+    </script>
+</body>
+</html>

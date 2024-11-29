@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>MOUSE EVENTS</h1>
+        <p>1)onmousemove 2)onmouseout</p>
+    </center>
+    <hr>
+    <h3 onmousemove="b(event)" onmouseout="c(event)" id="txt">Hover your mouse pointer on me</h3>
+
+    <script>
+        function b(event){
+      
+           val=document.getElementById("txt")
+            val.style.background="teal";
+            val.style.color="white";
+            val.style.padding="20px";
+        }
+        function c(event){
+            val=document.getElementById("txt")
+            val.style.background="";
+            val.style.color="";
+            val.style.padding="";
+        }
+    </script>
+</body>
+</html>

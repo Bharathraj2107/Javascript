@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+      <h1>Focus and Blur</h1>
+    </center>
+    <hr>
+    <label for="">Name</label>
+    <input type="text" id="inp" onfocus="fcus()" onblur="bur()">
+    <script>
+        function fcus(){
+            document.getElementById("inp").style.backgroundColor="green";
+        }
+        function bur(){
+            document.getElementById("inp").style.backgroundColor="red";
+        }
+    </script>
+</body>
+</html>

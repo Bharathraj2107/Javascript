@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Media Events</h1>
+    </center>
+    <hr>
+    <h1 id="text"></h1>
+    <video src="./assets/media/Desktop.mp4" height="200"controls onplay="ply()" onpause="puse()" onseeking="seek()" onvolumechange="volumechange()"></video>
+  
+    <script>
+        box=document.getElementById("text");
+        function ply(){
+            box.innerText="video is playing"
+            box.style.color="green";
+        }
+        function puse(){
+            box.innerText="video is paused"
+        }
+        function seek(){
+            box.innerText="video time is seeking"
+        }
+        function volumechange(){
+            box.innerText="volume changing"
+        }
+    </script>
+</body>
+</html>

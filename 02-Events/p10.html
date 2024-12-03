@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightgrey;
+        }
+        .container{
+         background-color: rgba(247, 18, 57, 0.884);
+         width:70%;
+         color:white;
+         padding:10px;
+         margin:10px;
+        }
+    </style>
+</head>
+<body oncontextmenu="reload(event)">
+    <h4>oncontextmenu()</h4>
+    <div class="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias corporis labore voluptas, iure maxime in quia illo eum ratione, architecto incidunt facere saepe voluptatibus. Obcaecati velit nobis eos incidunt voluptas!
+        Vel id veritatis ea, accusantium sed ratione deleniti nulla, earum alias, consequuntur corrupti autem! Quas architecto adipisci recusandae porro, deserunt ex et quaerat, dolor, culpa illo quod debitis harum perferendis?</p>
+    </div>
+    <script>
+        function reload(js){
+            js.preventDefault();
+            alert("right click is disabled")
+        }
+    </script>
+</body>
+</html>

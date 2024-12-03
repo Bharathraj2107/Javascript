@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Write some content inside input and then select and copy it</h1>
+    </center>
+    <label for="">Enter some content</label>
+    <input type="text" id="inp" oncut="cut()" oncopy="copy()" onselect="selct()"><br><br>
+    <textarea name="" id="txta" cols="30" rows="10" onpaste="paste()"></textarea>
+    <script>
+       
+function cut(){
+    alert("content is cut")
+}
+function paste(){
+    alert("content is pasted")
+}
+function copy(){
+    alert("content is copied")
+}
+function selct(){
+    alert("content is selected")
+}
+
+    </script>
+</body>
+</html>

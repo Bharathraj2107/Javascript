@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Onchange</h1>
+    </center>
+    <hr>
+    <h3 id="text"></h3>
+    <label for="">Choose tech</label>
+    <select name="choose Technology" id="choose" onchange="change()">
+        <option value="null">choose Technology</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JS</option>
+    </select>
+    <script>
+        function change(){
+        val=document.getElementById("text");
+        selected = document.getElementById("choose").value;
+        if (val==null){
+            document.getElementById("text").innerHTML="No value is selected"
+        }
+        else{
+            document.getElementById("text").innerHTML=`you have selected ${selected}`
+        }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Crud</title>
+    <style>
+        center{
+            padding: 10px;
+            background-color: gray;
+            border-radius: 1rem;
+            
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+        }
+        section>div>table, section>div>table td, section>div>table th{
+            border: 2px solid gray;
+            border-collapse: collapse;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        #saveEdit{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Crud Using an Array</h1>
+    </center>
+    <hr>
+   <section>
+    <div>
+        <h2>Add country</h2>
+        <form autocomplete="off" onsubmit="app.insertData(event)">
+                <label for="">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Country Name" required>
+                <button type="submit">Add</button>
+        </form>
+           <br><hr>
+
+           
+           <form onsubmit="app.EditData(event)" autocomplete="off" id="saveEdit">
+            <h2>Edit Country</h2>
+            <label for="name">Edit</label>
+            <input type="text" name="edit" id="edit" placeholder="Edit Country">
+            <button type="submit">Edit Country</button>
+           </form>
+           <br><hr>
+        <p id="count"></p>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Option</td>
+            </tr>
+            <tbody id="countries"></tbody>
+        </table>
+    </div>
+   </section>
+    <script>
+        var app= new function ()
+        {
+            this.countries=['India','Australia','UK','US','sri lanka','south africa','nepal','netherland','Bhutan','Zambia'];
+
+            this.tbody=document.getElementById("countries");
+            this.fetchAll=function()
+            {
+                var data="";
+                if(this.countries.length>0)
+                {
+                    for(let index=0;index<this.countries.length;index++)
+                    {
+                        data +=`<tr>
+                            <td>${this.countries[index]}</td>
+                            <td><button onclick="app.EditData(${index})">edit</button>
+                            <button onclick="app.DeleteData(${index})">delete</button></td>
+                            </tr>`
+                    };
+                   
+                }
+                this.CountCountries(this.countries.length);
+                return this.tbody.innerHTML=data;
+            }
+            this.CountCountries=function(data){
+                var count=document.getElementById("count");
+                var name="country";
+                if(data){
+                    if(data>1){
+                        name="Countries";
+                    }
+                    count .innerHTML=`Total :${data}${name};`
+                }
+                else{
+                    count.innerHTML='no'+' '+name;
+                }
+            }
+            this.insertData=function(e){
+                e.preventDefault();
+                let insertText=document.getElementById("name");
+                this.countries.push(insertText.value);
+                this.fetchAll();
+                insertText.value='';
+            }
+
+            this.DeleteData=function(index){
+                this.countries.splice(index,1);
+                this.fetchAll();
+            }
+
+            this.EditData=function(index){
+                let editForm=document.querySelector('#saveEdit');
+                let editText=document.getElementById("edit");
+
+                editForm.style.display='block';
+                editText.value=this.countries[index];
+
+                self=this;
+
+                editForm.onsubmit=function(e){
+                    e.preventDefault();
+                    var country=editText.value;
+                    console.log(typeof country)
+                    if(editText.value){
+                        self.countries.splice(index,1,editText.value);
+                        editForm.style.display='none';
+                        app.fetchAll();
+                    }
+                }
+}
+        };
+                
+        
+        app.fetchAll();
+        console.log(typeof app);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>focusin and focusout</h1>
+    </center>
+    <hr>
+    <form action="" onfocusin="focusin(event)" onfocusout="focusout(event)">
+        <label for="username">Username</label>
+        <input type="text" id="username">
+        <label for="passsword">password</label>
+        <input type="text" id="password">
+    </form>
+    <script>
+        function focusin(event){
+            
+           event.target.style.background="yellow";
+           event.target.style.color="red";
+          
+        }
+        function focusout(event){
+           
+            event.target.style.background="grey";
+            event.target.style.color="pink";
+        }
+    </script>
+</body>
+</html>

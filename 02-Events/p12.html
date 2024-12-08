@@ -19,7 +19,7 @@
             <br><br>
 
             <label for="pass">Password</label>
-            <input type="password" name="pass" id="pass">
+            <input type="password" name="pass" id="pswd">
 
             <input type="checkbox" name="showPass" id="showPass"> 
             <span id="txt">Show Password</span>
@@ -44,13 +44,13 @@
             }
 
             document.getElementById("showPass").onclick = function(){
-                const pa = document.getElementById('pass');
+                const ps = document.getElementById('pswd');
 
-                if (pa.type === 'password') {
-                    pa.type = "text";
+                if (ps.type === 'password') {
+                    ps.type = "text";
                     document.getElementById("txt").innerText  = "Hide Password";
                 } else {
-                    pa.type = "password";
+                    ps.type = "password";
                     document.getElementById("txt").innerText  = "Show Password";
                 }
             };

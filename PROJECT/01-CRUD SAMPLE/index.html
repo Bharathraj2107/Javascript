@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section>
+        <table>
+            <tr>
+                <td>
+                    <form autocomplete="off" onsubmit="event.preventDefault(); onSubmitForm();">
+                        <div>
+                            <label>Full Name*</label>
+                            <span id="fullNameValidationError" class="validation-error hide">This field is required</span>
+                            <input type="text" name="fullname" id="fullname">
+                        </div>
+                        <div>
+                            <label for="">EMP CODE</label>
+                            <input type="text" name="empCode" id="empCode">
+                        </div>
+                        <div>
+                            <label for="">Salary</label>
+                            <input type="text" name="salary" id="salary">
+                        </div>
+                        <div>
+                            <label for="">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>
+                        <div>
+                           <input type="submit" value="Submit">
+                           <button onclick="insertNewRecord();">Adduser</button>
+                        </div>
+                    </form>
+                </td>
+                <td>
+                    <table id="employeeList" class="list">
+                        <thead>
+                            <tr>
+                                <th>Full Name</th>
+                                <th>EMP Code</th>
+                                <th>Salary</th>
+                                <th>City</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Employee data will be inserted here -->
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

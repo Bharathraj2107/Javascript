@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>MOBILE NUMBER VALIDATION</h1>
+    </center>
+    <hr>
+    <form autocomplete="off"onsubmit="mobileHandler(event)">
+        <label for="">Enter user Mobile Number</label>
+        <input type="text" placeholder="user Mobile" name="mobile" id="mobile">
+        <strong id="status"></strong>
+        <button type="submit">SUBMIT MOBILE NUMBER</button>
+    </form>
+    <script>
+      function mobileHandler(event){
+        event.preventDefault();
+        let mobile=document.getElementById("mobile").value;
+        let status=document.getElementById("status");
+
+        let regex=/^[6-9]\d{9}$/;
+        if(mobile.length==0){
+            status.innerHTML='Invalid mobile number';
+            status.style.color='orange';
+        }else{
+            if(regex.test(mobile)===false){<!--test is used to check true or false-->
+                status.innerHTML='Invalid mobile number';
+                status.style.color='orange';
+            }else{
+                status.innerHTML='valid mobile number';
+                status.style.color='green';
+        }  
+        }
+      }
+    </script>
+</body>
+</html>

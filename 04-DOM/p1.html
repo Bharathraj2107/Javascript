@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+        <p>The Document Object Model(Dom) is a programming interface represents the page so that programmes can change the document's content, structure and style</p>
+    </center>
+    <hr>
+    <section id="block"></section>
+    <script>
+        document.write(`<h1>welcome to javascript</h1>`)
+        document.getElementById("block").innerHTML=`<h1>custom Location Text</h1>`;
+        document.getElementById("block").style.backgroundColor='green';
+        document.getElementById("block").style.color="#fff";
+        document.getElementById("block").style.padding='20px';
+        document.getElementById("block").style.textAlign='center';
+    </script>
+</body>
+</html>

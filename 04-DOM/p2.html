@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>.innerHTML and .innerText</h1>
+    </center>
+    <hr>
+    <div id="blk1"></div>
+    <div id="blk2"></div>
+    <hr>
+    <h2 id="tx1"></h2>
+    <script>
+    document.getElementById("blk1").innerHTML=`I am innerHTML`;
+    document.getElementById("blk2").innerText=`I am innerText`;
+    document.getElementById("blk1").style.backgroundColor="green";
+    document.getElementById("blk1").style.color="#fff";
+    document.getElementById("blk2").style.backgroundColor="red";
+    document.getElementById("blk2").style.color="#fff";
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .highlight{
+            background-color: dimgray;;
+        }
+    </style>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <div id="info" class="disabled">Something very important</div>
+    <script>
+        let elem=document.querySelector("#info")
+        elem.className="mamatha ";
+        elem.className+="rajath";
+
+        elem.classList.add("sadik");
+        elem.classList.add("note","highlight","visible");//add multiple classes
+
+        elem.classList.remove("hide");//Remove a class
+        elem.classList.add("note","disabled","visible");//Remove multiple classes
+
+        elem.classList.toggle("sadik");//if exists it will remove or else it will add
+        elem.classList.toggle("prajwal");
+    </script>
+</body>
+</html>

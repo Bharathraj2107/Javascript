@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 id="test">DOM</h1>
+    </center>
+    <hr>
+    <p class="tick">test para</p>
+    <ul>
+        <li>Bread</li>
+        <li class="tick">Coffee</li>
+        <li>Pineapple cake</li>
+    </ul>
+    <ul id="test">
+        <li>Bread</li>
+        <li class="tick">Coffee</li>
+        <li>Pineapple cake</li>
+    </ul>
+    <script>
+       let heading= document.querySelector("h1")<!--this selects only one-->
+       heading .style.color="red";
+       console.log(heading)
+       console.log(typeof heading)
+       console.log(heading.length)
+       let cls=document.querySelectorAll("li.tick"); //this selects all the tick-->
+       console.log(cls)
+       console.log(typeof cls)
+       console.log(cls.length)
+       cls[0].style.textDecoration="line-through";
+       cls[0].style.color="green";
+
+       cls[1].style.textDecoration="underline";
+       cls[1].style.color="yellow";
+
+       
+    </script>
+</body>
+</html>

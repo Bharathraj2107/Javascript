@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="blk"></section>
+    <hr>
+    <button type="submit" onclick="addContent()">Add Block</button>
+    <button type="submit" onclick="removeContent()">Remove Content</button>
+
+    <script>
+        function addContent(){
+            document.getElementById("blk").innerHTML=`<h1>WELCOME TO JS</h1><h3>Sub title of js</h3><p>lorem
+            ipsum dolor sit amet consectetur adipisicing elit.    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi qui architecto ullam minima repudiandae explicabo, tempora voluptatem fugit excepturi quis eius recusandae tenetur, quo deserunt, optio totam soluta facilis error?</p> <button>Remove Content</button>`;
+        }
+        function removeContent(){
+            document.getElementById("blk").innerHTML="";
+        }
+    </script>
+</body>
+</html>

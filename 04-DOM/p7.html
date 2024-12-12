@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p class="text">This is a paragraph text</p>
+    <h1 class="text">This is a paragraph text</h1>
+    <script>
+        var matches=document.getElementsByClassName("text");
+        document.write(`${matches}`)
+        console.log(matches);
+        matches[0].style.backgroundColor="green";
+        matches[1].style.backgroundColor="pink";
+     
+        for( key in matches){
+             matches[key].style.backgroundColor="grey";
+             matches[key].style.color="white";
+        }
+    </script>
+</body>
+</html>

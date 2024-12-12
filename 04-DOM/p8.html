@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p>This is paragraph 1</p>
+    <div>This is a div</div>
+    <p>This is paragraph 2</p>
+    <p>This is Js paragraph</p>
+    <script>
+        var matches=document.getElementsByTagName("p")
+        console.log(matches)
+        <!-- for(let i=0;i<matches.length;i++){
+            matches[i].style.backgroundColor="red";
+        } -->
+        for( key in matches){
+            matches[key].style.backgroundColor="red";
+            matches[key].style.color="white";
+       }
+        
+    </script>
+</body>
+</html>

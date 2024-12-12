@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <h2 id="head"></h2>
+    <input type="text" id="name" name="name" placeholder="Javascript DOM">
+    <script>
+        let box=document.getElementById("name")
+        box.style.width="100%";
+        box.style.height="50px";
+        box.style.borderRadius="10px";
+        console.log( box.getAttribute("id"));
+        console.log(  box.getAttribute("style"));
+        box.setAttribute("Title","Javascript Title");
+        box.getAttribute("title");
+        box.setAttribute("value","Javascript");
+        box.getAttribute("value");
+        console.log(box);
+    </script>
+</body>
+</html>

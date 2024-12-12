@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p id="pp" style="color:red; font-size:20px;">This is a paragraph</p>
+    <p id="pp" style="color:green;">This is another paragraph</p>
+    <script>
+        var elm=document.querySelector("p")
+        document.write(elm.style.color,"<br>")
+        document.write(elm.style.fontSize)//for style in js font-size instead we have to use fontSize
+        document.write(elm.style.fontWeight)
+        
+        let a=getComputedStyle(elm);//here even if the property is not defined in the main it takes default value  but above  method will not take
+        document.write(a.color,"<br>")
+        document.write(a.fontSize,"<br>")
+        document.write(a.fontWeight,"<br>")
+    </script>
+</body>
+</html>

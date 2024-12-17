@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>open and close</h1>
+    </center>
+    <hr>
+    <button onclick="openWindow()">open Window</button>
+    <button onclick="closeWindow()">close Window</button>
+    <script>
+        let myWindow;
+        let windowProps="width=300,height=300,top=200,left=300,toolbar=yes,scrollable=yes,resizable=yes";
+        function openWindow(){
+            //mywindow=window.open("https:be-practical.com");//new tab
+            myWindow=window.open("https://be-practical.com"."",window.Props);
+        }
+        function closeWindow(){
+            myWindow.close();//close the newly opened tab
+        }
+    </script>
+</body>
+</html>

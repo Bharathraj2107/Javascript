@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function myFunction(){
+        alert("hello world!");
+    }
+    //setInterval(myFunction,1000);//call repeatedly
+    //setTimeout(myFunction,1000);//only once after execution stop and it takes time that we have mentioned
+    setInterval(function(){
+      alert("hello world!");
+    },2000); 
+    //setTimeout(function(){
+      // alert("hello how are you!");
+    //},2000);
+    var timeOUT;
+    function showAlert(){
+        alert("This is Javascript Alert Box..!");
+    }
+    function clearAlert(){
+        clearTimeout(0);
+    }
+   </script> 
+   <button type="button" onclick="setTimeout(myFunction,1000);">click me</button> 
+    <!-- <button type="button" onclick="setInterval(myFunction,1000);">click me</button>  -->
+
+</body>
+</html>

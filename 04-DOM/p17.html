@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>document.hasFocus()</h1>
+    </center>
+    <hr>
+    <p id="log">Awaiting focus check.</p>
+    <button onclick="handler()">Click Me</button>
+    <script>
+        function handler(){
+            window.open("https://zerozilla.com/","Zerozilla",'height=400,left=100,right=100')
+        }
+        function checkfocus(){
+            var log=document.getElementById("log")
+            var body=document.querySelector("body")
+            if(document.hasFocus()){
+                log.textContent="The document has focus"
+                body.style.backgroundColor="teal";
+                body.style.color="white";
+            }else{
+                log.textContent="The document is not  focus"
+                body.style.backgroundColor="red";
+                body.style.color="white";
+            }
+        
+           
+
+        }
+        setInterval(checkfocus(),1000)
+    </script>
+</body>
+</html>

@@ -23,6 +23,7 @@
         <hr>
 
         <script>
+          
             let ary = [99,32,23,43,53];
             let str = ['Zebra', 'Year', 'Van', 'Apple'];
 
@@ -35,6 +36,19 @@
             
             str.sort();
             document.write(`<p>After SORT : ${str}</p>`);
+            function compareFunction(ary){
+                for(var i=0;i<ary.length;i++){
+                    for(var j=i+1;i<ary.length;j++){
+                        if(arr[i]>arr[j]){
+                            var temp=arr[i];
+                        }
+                        else{
+                            var temp=arr[j];
+                        }
+                    }
+                }
+            }
+        
         </script>
     </body>
 </html>

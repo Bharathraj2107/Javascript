@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By creating instance of object directly (using new keyword)</h1>
+    </center>
+    <hr><strong>SYNTAX:</strong>
+    <pre>
+        let objectName=new constructorMethod();
+    </pre>
+    <hr>
+    <script>
+        let empDetails= new Object();
+        console.log(typeof empDetails);
+        empDetails.firstName="Kavya";
+        empDetails.lastName="Shree";
+        empDetails.fullName=function(){return this.firstName+ ""+this.lastName}
+
+        document.write(empDetails.fullName()+"<br>");
+        document.write(empDetails.firstName+"<br>");
+        document.write(empDetails.lastName+"<br>");
+
+    </script>
+</body>
+</html>

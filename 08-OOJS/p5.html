@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object methods</h1>
+    </center>
+    <hr>
+    <script>
+        const user={
+            name:"Raj",
+            email:"raj@gmail.com",
+            mobile:"9966884455",
+            age:25
+        };
+        console.log('user=',user);
+        let user1=Object.create(user);//her both user1 and user both are same
+        console.log('typeof user1=',typeof user1);
+        console.log(user1);
+        console.log(user1.age);
+        console.log(user1.email);
+        console.log(user1.mobile);
+        console.log(user1.name);
+    </script>
+</body>
+</html>

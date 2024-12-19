@@ -25,14 +25,14 @@
 
             document.write(`<p>Before the result of Array.copyWithin(target, start, end) : ${fruits}</p>`);   
 
-            document.write(`<p>After the result of Array.copyWithin(target, start, end) : ${fruits.copyWithin(2, 0)}</p>`); 
+            document.write(`<p>After the result of Array.copyWithin(target, start, end) : ${fruits.copyWithin(2, 0)}</p>`); //her first is target from where to start and  the 2ndd index is index value from where we have to insert
 
             // Cpoy the first two array elements to the third and fourth position
             let fruit = ['Banana', 'Orange', 'Apple', "Mango", "Kiwi", "papaya"];
 
             document.write(`<p>Before the result of Array.copyWithin(target, start, end) : ${fruit}</p>`);  
 
-            document.write(`<p>After the result of Array.copyWithin(target, start, end) : ${fruit.copyWithin(2, 0, 2)}</p>`); 
+            document.write(`<p>After the result of Array.copyWithin(target, start, end) : ${fruit.copyWithin(2, 0,2)}</p>`); //here first parameter is from which index we have to start inserting and the 2nd is value from which index we have to start and last index-1 
         </script>
     </body>
 </html>

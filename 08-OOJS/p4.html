@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By using an  object constructor (constructor Parameter)</h1>
+    </center>
+    <hr>
+    <h3>Example-1</h3>
+    <script>
+        let empDetails1=new Object({
+            "fname":"prabhat",
+            "lname":"sai",
+            "fullName":function(){
+                return this.fname + " " + this.lname;
+            }
+        });
+        document.write(typeof empDetails1 +"<br>")
+        document.write( empDetails1.fname +"<br>")
+        document.write( empDetails1.lname +"<br>")
+        document.write( empDetails1.fullName() +"<br>")
+    </script>
+</body>
+</html>

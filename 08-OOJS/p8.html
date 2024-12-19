@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>object methods=objects.defineProperty(objects,key,{value:xx})</h1>
+    </center>
+    <hr>
+    <script>
+        let user={
+            name:"john Doe",
+            age:30,
+            greet:function(){
+                console.log(`hello,my name is ${this.name}`);
+            }
+        };
+        console.log(user);
+        Object.defineProperty(user,'email',{value:"john@gmail.com"});
+    </script>
+</body>
+</html>

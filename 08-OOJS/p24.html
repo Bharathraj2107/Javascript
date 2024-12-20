@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+    </center>
+    <hr>
+    <script>
+        function User(){
+            this.name="Manu"
+            this.getName=function(){
+                document.write(`<h3>My name is : ${this.name}</h3>`)
+            }
+        }
+        let x=new User()
+        console.log('user instance=',x);
+
+        //constructor.prototype.property=value
+        User.prototype.email="manu@gmail.com"
+        User.prototype.getEmail=()=>{//fetch from the existing value 
+            document.write(`<h3>email=${x.email}</h3>`)
+        }
+        document.write(`<h3>name=${x.name}`)
+            document.write(`<h3>email=${x.email}`)
+        x.getEmail()
+        x.getName()
+    </script>
+</body>
+</html>

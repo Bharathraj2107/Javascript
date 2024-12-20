@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Constructor methods (ES-5)</h1>
+    </center>
+    <hr>
+    <script>
+             // constructor follows function and object
+            // name of constructor first letter start with uppercase
+            // constructor properties create using 'this' 
+            // create an instance to constructor using 'new'
+            // constructor can't return 
+        function User(){
+            let a=10;//Local variable
+            this.b=true//constructor prototype or constructor Variable
+            this.name="Ramesh";
+            this.email="ramesh@gmail.com";
+            this.mobile=9966884455;
+            this.age=25;
+            this.greet=function(){
+                return `Hello ,My name is ${this.name}`;
+            }
+            // instance ->it is a variable we provide permission to access the properties of constructor
+        }
+
+        let user=new User();//for constructor method we have to create the object instance 
+            console.log(user);
+            console.log(typeof user);
+
+            document.write(user.name);
+            document.write(user.email);
+            document.write(user.mobile);
+            document.write(user.age);
+            document.write(user.greet());
+
+    </script>
+</body>
+</html>

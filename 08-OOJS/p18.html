@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Entries to object conversion</h1>
+    </center>
+    <hr>
+    <script>
+        const userEntry=[['name','Johny'],['email','johny@gamil.com'],['age',33]];
+        console.log('userEntry:',userEntry);
+        //convert entries into object
+        const userObject=Object.fromEntries(userEntry);//by passing the user entries we are creating the object
+        console.log('userObject:',userObject);
+
+    </script>
+</body>
+</html>

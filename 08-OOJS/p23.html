@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+        <p>Prototype keyword-is used to create a property to an constructor externally</p>
+    </center>
+    <hr>
+    <script>
+        function Student(){
+            //Local Property
+            let name,gender;
+            //Constructor Property
+            this.name="ABCD";
+            this.gender="Male";
+        }
+        let stud=new Student();//Constructor Object
+        document.write("<b>stud.name:</b>"+stud.name+"<br><br>");
+        document.write("<b>stud.gender:</b>"+stud.gender+"<br><br>");
+
+        stud.age=20;//This property is applicable only for that particular object not for other objects
+        document.write("<b>`stud.age`:</b>"+stud.age+"<br><br>");
+        let stud1=new Student();
+        document.write("<b>stud1.name:</b>"+stud1.name+"<br><br>");
+        document.write("<b>stud1.gender:</b>"+stud1.gender+"<br><br>");
+        document.write("<b>stud1.gender:</b>"+stud1.age+"<br><br>");//it gives undefined undefined
+
+        //if we want to give the property externally to the function  then use the prototype
+        Student.prototype.age1=30;//This property is applicable for all the objects created from the function
+        let student1=new Student();
+        document.write("<b>student1.age1:</b>"+student1.age1+"<br><br>");
+
+        let student2=new Student();
+        document.write("<b>student2.age1:</b>"+student1.age1+"<br><br>");
+
+
+    </script>
+</body>
+</html>

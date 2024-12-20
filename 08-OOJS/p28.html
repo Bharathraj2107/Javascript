@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CLASS</h1>
+        <h3>Class ES-6 -> group of objects (state and behavior)</h3>
+        <p>state=> variables,objects ->properties</p>
+        <p>Behavior -> methods,functions</p>
+    </center>
+    <hr>
+    <h3>Class syntax contains two components</h3>
+    <ol>
+        <li>Class Declaration</li>
+        <li>Class Expression</li>
+    </ol>
+    <hr>
+    <script>
+        document.write(`<h3>Class Declaration</h3>`);
+        class User{
+            //built in method
+            constructor(){
+                //property
+                this.name='Raju';
+                this.email='raju@gmail.com';
+                document.write(`<h1>Constructor method</h1>`);
+
+            }
+            //user defined method
+            display(){
+                document.write(`<h1> name is ${this.name}</h1>`)
+                let x=100;
+                document.write(`<h1> x value is ${x}</h1>`)
+            }
+            //user defined method
+            print(){
+                document.write(`<h1> email is ${this.email}</h1>`)
+            }
+        }
+        //Ref or object for class
+        let x=new User();
+        console.log('x=',x);
+        document.write(`<h3>name=${x.name}</h3>`)
+        document.write(`<h3>email=${x.email}</h3>`)
+        document.write(`<hr>`);
+        x.display();
+        x.print();
+    </script>
+</body>
+</html>

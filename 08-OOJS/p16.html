@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Write protect the values</h1>
+    </center>
+    <hr>
+    <script>
+        var user={};
+        Object.defineProperties(user,{
+            name:{
+                value:"raju",
+                writable:true
+            },
+            email:{
+                value:"raju@example.com",
+                writable:false
+            },
+            mobile:{
+                value:"9966884455",
+                writable:true
+            }
+        });
+        console.log(user);
+        user.name="sam";
+        user.email="sam@example.com";
+        user.mobile=77777777
+    </script>
+</body>
+</html>

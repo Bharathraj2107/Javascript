@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>CLASS</h1>
+        <h3>Class ES-6 -> group of objects (state and behavior)</h3>
+        <p>state=> variables,objects ->properties</p>
+        <p>Behavior -> methods,functions</p>
+    </center>
+    <hr>
+    <h3>Class syntax contains two components</h3>
+    <ol>
+        <li>Class Declaration</li>
+        <li>Class Expression</li>
+    </ol>
+    <hr>
+    <script>
+        document.write(`<h3>Class Declaration</h3>`);
+        class Person {
+            constructor(){//it is optional we need constructor to create object
+                document.write(`<h3> WELCOME TO PERSON CLASS </h3>`)
+            }
+        }
+        let person=new Person();
+        class Student1 {
+            constructor(){}
+                getBepractical(){//method inside constructor
+                    let text="This IS a getBepractical Method..!";
+                    document.write(`<h1>${text}</h1>`);
+                
+            }
+        }
+        let student1=new Student1();
+        student1.getBepractical();
+    </script>
+</body>
+</html>

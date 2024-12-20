@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>write protect the values</h1>
+    </center>
+    <hr>
+    <script>
+        var user={
+            email:"john@gmail.com",
+        };
+        user.email="john123@gamil.com";
+        console.log(user);
+        Object.defineProperty(user,"name",
+        {
+            value:"john",
+            writable:true //true=> writeable ,false => readable (write protect) default the name can be changed if true or false not editable   
+        });
+        user.name="johnny";
+       </script>
+</body>
+</html>

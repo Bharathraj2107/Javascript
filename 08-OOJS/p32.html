@@ -21,5 +21,86 @@
         <li>In such case,we can call the static method either using the class name or as the property of the constructor.</li>
     </ul>
     <hr>
+    <h3>Static Method Example 1..!</h3>
+    <script>
+        class Demo{
+            static Display(){
+                document.write(`<p> This is a demo static method..!</p>`);
+            }
+        }
+        Demo.Display();
+    </script>
+    <h3>Static Method Example 2..!</h3>
+    <script>
+        class Demo1{
+            static Display1(){
+                return "This is Display1 static method..!";
+            }
+            static Display2(){
+                return "This is Display2 static method..!";
+            }
+        }
+        document.write(Demo1.Display1()+"<br>");
+        document.write(Demo1.Display2());
+    </script>
+    <h3>Static Method Example 3..!</h3>
+    <script>
+        class Demo2 {
+            static Display1(){
+                return "This is Display1 static method..!";
+            }
+            static Display1(){
+                return "This is Display2 static method..!";
+            }
+        }
+        document.write(Demo2.Display1());
+    </script>
+    <h3>Static Method Example 4..!</h3>
+    <script>
+        class Demo3 {
+            static Display(){
+                return "This is class Demo4 static method example..!";
+            }
+            constructor(){
+                document.write(Demo3.Display());
+            }
+        }
+        var demo3=new Demo3();
+    </script>
+    <h3>Static Method Example 5..!</h3>
+    <script>
+        class Demo4{
+            constructor(){}//non static method
+            static Display(){
+                return "This is class Demo4 static method example..!";
+            }
+            getresult(){
+                document.write(Demo4.Display());
+            }
+            static test(){
+                //.getresult();
+            }
+               
+            
+        }
+        let demo4=new Demo4();
+        demo4.getresult();
+        Demo4.test(); 
+    </script>
+    <h3>Static Method Example 6..!</h3>
+    <script>
+        class StaticMethodCall {
+            static staticMethod(){
+                return 'Static method has been called';
+            }
+            static anotherStaticMethod(){
+                return this.staticMethod()+ 'from another static method';
+            }
+        }
+        document.write(StaticMethodCall.staticMethod());
+        //static method has been called
+        document.write(StaticMethodCall.anotherStaticMethod());
+        //Static method has been called from another static method
+    </script>
 </body>
 </html>

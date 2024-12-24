@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype Object</h1>
+        <p>Prototype Objects to acquire properties and features from one another.</p>
+        <strong>Syntax</strong>
+        <p>ClassName.prototype.methodName</p>
+    </center>
+    <hr>
+    <h2>Example-1</h2>
+    <script>
+        function Employee(firstName,lastName){
+            this.firstName1 = firstName;
+            this.lastName1 = lastName;
+
+            
+        }
+        Employee.prototype.getFullName=function(){
+            return this.firstName+" "+this.lastName
+        }
+        let emp=new Employee('HTML','CSS');
+        document.write(emp.firstName1+"<br>");
+        document.write(emp.lastName1+"<br>");
+        document.write(emp.fullName());
+    </script>
+    <h2>EXAMPLE-2</h2>
+    <script>
+        class Admin{
+            constructor(firstName,lastName){
+                this.fn=firstName;
+                this.ln=lastName;
+            }
+        }
+        let admin=new Admin("Arjun","Partha");
+        Admin.prototype.result=function(){
+            return this.fn+" "+ this.ln;
+        }
+        document.write(`<p>Result Function : ${admin.result()}</p>`);
+    </script>
+</body>
+</html>

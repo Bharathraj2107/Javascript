@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <center>
+        <h1>PROMISES</h1>
+    </center>
+    <hr>
+    <div id="git"></div>
+    <script>
+        fetch('assets/js/user.json')//here we are fetching
+        .then(res=>res.json())//here we are settling
+        .then(result=>{//here we are showing if true means present
+            console.table(result);
+            fetch(`https://api.github.com/users/${result.name}`)
+            .then(res=>res.json())
+            .then(rrr=>{
+                console.log(rrr);
+
+                let img=document.createElement("img");//here we are creating image 
+                img.src=rrr.avatar_url;
+                let block=document.querySelector("#git");
+                     block.appendChild(img);
+            })
+        })
+        .catch();
+    </script>
+</body>
+</html>

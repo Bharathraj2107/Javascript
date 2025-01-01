@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <center>
+        <h1>PROMISES</h1>
+    </center>
+    <hr>
+    <script>
+        fetch('https://jsonplaceholder.typicode.com/todos',
+        //Insert Data into JSONPlaceholder(TEST CASE CODE)
+        /*{
+            method:'POST',
+            headers:{
+            'Content-Type': 'application/json',
+            'Accept': 'application/json,
+            'Authorization': 'Bearer YOUR_ACCESS_TOKEN',
+            'crossOrigin':true,
+            "Access-control-Allow-Origin":"*"
+            },
+            body:JSON.stringify({
+                 "userid":1,
+                title:'new Task',
+                completed:false
+
+            }
+    });
+        */
+        ).then(response=>response.json())
+        .then(data=>{
+            console.log(data);
+            data.forEach(todo => {
+                console.log(`ID :${todo.id}, Title: ${todo.title}, Completed: ${todo.completed}` );
+                /* //create a new promise 
+                let newPromise=new Promise((resolve,reject=>{
+                setTimeout(()=>{
+                if(todo.completed){resolve(`ID :${todo.id}, Title: ${todo.title}, Completed: ${todo.completed}`)}else{reject("Not Completed":${todo.title}'};},2000};
+            });
+            //Resolve the new promise
+            newPromise.then((message)=>{
+            document.write(`<p>${message}</p>`);
+            }).catch((message)=>{
+            document.write(`<p>${message}</p>`);
+            })
+            */
+            })
+        }).catch((error)=>{console.error(error)});
+    </script>
+</body>
+</html>
